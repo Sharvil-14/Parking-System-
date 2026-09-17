@@ -27,11 +27,6 @@ export default function LoginPage() {
     }
   };
 
-  const handleDemoPreset = (presetEmail, presetPass) => {
-    setEmail(presetEmail);
-    setPassword(presetPass);
-  };
-
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
       <div className="glass-card w-full max-w-md p-8 rounded-3xl border border-slate-700/80 shadow-2xl space-y-6">
@@ -49,36 +44,6 @@ export default function LoginPage() {
             <span>{error}</span>
           </div>
         )}
-
-        {/* Preset Quick Login Buttons */}
-        <div className="space-y-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block text-center">
-            One-Click Demo Account Credentials
-          </span>
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              type="button"
-              onClick={() => handleDemoPreset('admin@vpms.com', 'admin123')}
-              className="py-2 px-2 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-300 hover:bg-purple-500/20 text-xs font-bold transition-all text-center"
-            >
-              Admin
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoPreset('operator@vpms.com', 'operator123')}
-              className="py-2 px-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/20 text-xs font-bold transition-all text-center"
-            >
-              Operator
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoPreset('customer@vpms.com', 'customer123')}
-              className="py-2 px-2 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 hover:bg-blue-500/20 text-xs font-bold transition-all text-center"
-            >
-              Customer
-            </button>
-          </div>
-        </div>
 
         <form onSubmit={handleLogin} className="space-y-4 text-xs font-medium">
           <div>
